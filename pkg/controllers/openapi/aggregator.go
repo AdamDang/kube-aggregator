@@ -275,7 +275,7 @@ func (s *specAggregator) UpdateAPIServiceSpec(apiServiceName string, spec *spec.
 
 	specInfo, existingService := s.openAPISpecs[apiServiceName]
 	if !existingService {
-		return fmt.Errorf("APIService %q does not exists", apiServiceName)
+		return fmt.Errorf("APIService %q does not exist", apiServiceName)
 	}
 
 	// For APIServices (non-local) specs, only merge their /apis/ prefixed endpoint as it is the only paths
